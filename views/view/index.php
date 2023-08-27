@@ -12,12 +12,6 @@ $loadAjaxUrl = Url::toAjaxLoad($contentContainer);
 
 ?>
 <div class="panel panel-default">
-    <div class="panel-body" style="background-color:<?= $this->theme->variable('background-color-secondary') ?>">
-        <?= CalendarFilterBar::widget([
-            'filters' => $filters,
-            'showSelectors' => false
-            ]) ?>
-    </div>
     <div class="panel-body">
         <?= FullCalendar::widget([
             'canWrite' => $canAddEntries,
@@ -26,5 +20,11 @@ $loadAjaxUrl = Url::toAjaxLoad($contentContainer);
             'aspectRatio' => ThemeHelper::isFluid() ? 2 : 1.7
         ]);
         ?>
+    </div>
+    <div class="panel-body" style="background-color:<?= $this->theme->variable('background-color-secondary') ?>">
+        <?= CalendarFilterBar::widget([
+            'filters' => $filters,
+            'showSelectors' => false
+            ]) ?>
     </div>
 </div>

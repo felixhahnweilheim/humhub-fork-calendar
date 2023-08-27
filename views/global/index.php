@@ -16,12 +16,6 @@ $aspectRatio = $isFluid ? 1.9 : 1.5;
 ?>
 <div class="<?= $containerClass ?>">
     <div class="panel panel-default">
-        <div class="panel-body" style="background-color:<?= $this->theme->variable('background-color-secondary'); ?>border-radius:4px;">
-            <?= CalendarFilterBar::widget([
-                    'selectors' => $selectors,
-                    'filters' => $filters
-            ])?>
-        </div>
         <div class="panel panel-default" style="margin-bottom:0px">
             <div class="panel-body">
                 <?= FullCalendar::widget([
@@ -35,5 +29,11 @@ $aspectRatio = $isFluid ? 1.9 : 1.5;
             </div>
         </div>
 
+        <div class="panel-body" style="background-color:<?= $this->theme->variable('background-color-secondary'); ?>border-radius:4px;">
+            <?= CalendarFilterBar::widget([
+                    'selectors' => $selectors,
+                    'filters' => $filters
+            ])?>
+        </div>
     </div>
 </div>
